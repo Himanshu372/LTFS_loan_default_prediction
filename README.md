@@ -45,3 +45,22 @@ Test data is further randomly divided into **Public (25%) and Private (75%)** da
 Your initial responses will be checked and scored on the Public data.
 The final rankings would be based on your private score which will be published once the [competition](https://datahack.analyticsvidhya.com/contest/ltfs-datascience-finhack-an-online-hackathon/) is over.
 
+
+
+### My approach 
+
+Involved 4 steps
+1. Preprocessing and Feature engineering 
+2. Model fitting
+3. Model Optimization
+
+1. Preprocessing involved converting DOB and loan disbursal date into years and months from today respectively. Containerization of credit history scores and where the score wasn't available replacing those values by mean of the column. Using frequeny ratio for various features such as pincode, manufacture_id and employee_id. 
+
+2. For baseline model, I started with Logistic Regression. Then I used Naive Bayes and XGBoost, after which I tried LGBM. LGBM didn't perform as expected. 
+
+3. For model optimization I used 3 fold validatioin. After using validation on all models created, I achieved max score for AUC metric on XGB of .576. I also tried using hyper parameter tuning for XGB, but training was taking too long.
+
+
+
+
+ 
